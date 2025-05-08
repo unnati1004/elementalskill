@@ -1,4 +1,4 @@
-:root {
+/* :root {
      --primary-color: #007bff;
      --font-family: 'Segoe UI', sans-serif;
      --bg-color: #f0f2f5;
@@ -10,8 +10,10 @@
      margin: 0;
      font-family: var(--font-family);
      background-color: var(--bg-color);
+     display: grid;
+     place-items: center;
    }
-   
+    */
    .login-container {
      display: flex;
      justify-content: center;

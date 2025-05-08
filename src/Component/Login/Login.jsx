@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from "../../assets/image/elementskill.jpg";
 import './Login.css';
 
 const Login = () => {
@@ -41,7 +42,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form" aria-label="Login Form">
-        <img src="/logo.png" alt="Company Logo" className="logo" />
+        <img src={logo} alt="Company Logo" className="logo" />
         <h2>Login to Your Account</h2>
 
         <label htmlFor="email">Email or Username</label>
