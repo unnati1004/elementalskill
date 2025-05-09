@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "../../assets/image/elementskill.jpg";
+import logo from "../../assets/image/skurelabs_logo.jpg";
 import './Login.css';
 
 const Login = () => {
@@ -72,13 +72,13 @@ const Login = () => {
         {errors.password && <span className="error-msg" role="alert">{errors.password}</span>}
 
         <div className="login-options">
-          <label>
+          <label className="remember-me">
             <input
               type="checkbox"
               name="rememberMe"
               checked={formData.rememberMe}
               onChange={handleChange}
-            /> Remember Me
+            /> <span>Remember Me</span>
           </label>
           <a href="/forgot-password" className="link">Forgot Password?</a>
         </div>
