@@ -13,15 +13,27 @@ const Login = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    console.log(name,value)
     setFormData({ ...formData, [name]: type === 'checkbox' ? checked : value });
   };
 
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.email.trim()) newErrors.email = 'Email or username is required.';
-    if (!formData.password.trim()) newErrors.password = 'Password is required.';
-    return newErrors;
-  };
+const validate = () => {
+  const newErrors = {};
+
+  if (!formData.email.trim()) {
+    newErrors.email = 'Email or username is required.';
+  } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+    newErrors.email = 'Please enter a valid email address.';
+  }
+
+  if (!formData.password.trim()) {
+    newErrors.password = 'Password is required.';
+  } else if (formData.password.length < 6) {
+    newErrors.password = 'Password must be at least 6 characters.';
+  }
+
+  return newErrors;
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();

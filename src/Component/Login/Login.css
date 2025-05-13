@@ -5,7 +5,7 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
-  /* line-height: 1; Helps match checkbox and label */
+  line-height: 1; 
   cursor: pointer;
   margin-top: 1%;
 }
@@ -24,6 +24,7 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+
 }
 
 .logo {
@@ -53,6 +54,7 @@ a {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
+  color: black;
 }
 input[type="checkbox"] {
   appearance: none;
