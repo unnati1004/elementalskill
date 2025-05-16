@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 import "./Graph.css";
+// Requirements
+// User List
+// Display a list of users (name, email, company).
+// Use dummy data or fetch from a public API like https://jsonplaceholder.typicode.com/users.
+// Search Functionality
+// Add a search input to filter users by name or email.
 
 const Dummy_Graph = () => {
   const [originalData, setOriginalData] = useState([]);
