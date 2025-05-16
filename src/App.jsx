@@ -1,11 +1,13 @@
 import './App.css'
-import Login from './Component/Login/Login.jsx'
+import Dummy_Graph from './Component/Login/Graph.jsx'
+// import Login from './Component/Login/Login.jsx'
 
 function App() {
 
   return (
    <>
-     <Login/>
+     {/* <Login/> */}
+     <Dummy_Graph/>
    </>
   )
 }

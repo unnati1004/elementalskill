@@ -1,0 +1,16 @@
+div{
+    color: black; 
+}
+
+#heading{
+     border: 2px solid black !important;
+}
+
+tbody{
+     border: 2px solid black;
+}
+
+input[type="text"]{
+  background-color: white; 
+  color: black;
+}

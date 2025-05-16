@@ -8,6 +8,7 @@ const Login = () => {
     password: '',
     rememberMe: false,
   });
+  const [showPassword,setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -57,7 +58,7 @@ const validate = () => {
         <img src={logo} alt="Company Logo" className="logo" />
         <h2>Login to Your Account</h2>
 
-        <label htmlFor="email">Email or Username</label>
+        <label htmlFor="email">Email</label>
         <input
           type="text"
           id="email"
@@ -72,7 +73,7 @@ const validate = () => {
 
         <label htmlFor="password">Password</label>
         <input
-          type="password"
+          type= {showPassword?"text":"password"}
           id="password"
           name="password"
           placeholder="Enter your password"
@@ -81,6 +82,7 @@ const validate = () => {
           aria-required="true"
           aria-invalid={!!errors.password}
         />
+        <button onClick={()=>setShowPassword(!showPassword)}>{showPassword?"hide":"show"}</button>
         {errors.password && <span className="error-msg" role="alert">{errors.password}</span>}
 
         <div className="login-options">
